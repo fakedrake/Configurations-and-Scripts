@@ -1,0 +1,225 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Chris Perivolaropoulos}
+\def\mail{darksaga2006@gmail.com}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {programming, python, webdev},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1.5em}
+    }
+  }{
+  \end{list}
+}
+
+\newcommand{\dcolum}[2]{
+  \begin{tabular*}{0.45\textwidth}{r|l}
+    {\bf #1} & {#2} \\
+  \end{tabular*}
+}
+
+\newcommand{\tn}{\tabularnewline}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+% \centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  \href{http://www.upartas.gr/}{University of Patras} \\
+  Department of Electrical Engineering\\ and Computer Tecnology \\
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone:   & 6946731175 \\
+    Email:   & \href{mailto:\mail}{\tt \mail} \\
+    Address: & 28th October St.\\
+    & Ag. Vasileios Rion \\
+    &Achaia Zip 26504 \\
+    &Greece\\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Personal}
+
+\begin{itemize}
+\item Born on July 22, 1991 in Providence Rhode Island USA
+\item Current residence in Patras Greece.
+\end{itemize}
+
+
+\section*{Education}
+
+\begin{itemize}
+\item Student of Electrical Engineering and Computer Tecnology,
+  University of Patras (admitted 25th)
+\item 19,293 high school graduation grade
+\end{itemize}
+
+\section*{Competitions}
+
+\begin{tabularx}{\textwidth}{rX}
+  {\bf Greek National Olympiad in Informatics (PDP)} &
+  {\it 2007:} 14th place in 3rd phase \par
+  {\it 2008:} 13th place in 3rd phase \par
+  {\it 2009:} 10th place in 3rd phase, 10th place in International Olympiad
+  in Informatics preparation camp \\
+  \\
+  {\bf Greek National Mathematical Olympiad} &
+  {\it 2004:} Commendation in ``Thales'', ``Eucledes''; participation
+  in ``Archimedes'' competitions \par
+  {\it 2006:}Commendation in ``Thales'', ``Eucledes''; participation
+  in ``Archimedes'' competitions \par
+  {\it 2007:}Commendation in ``Thales''; participation
+  in ``Eucledes'' competitions \par
+  {\it 2008:}Commendation in ``Thales''; participation
+  in ``Eucledes'' competitions \par
+  {\it 2009:}Commendation in ``Thales'', ``Eucledes''; participation
+  in ``Archimedes'' competitions\\
+\end{tabularx}
+
+\section*{Prior Technical Experience}
+
+\begin{itemize}
+
+\item Administrator of the Linux network of Electrical Engineers
+  deprtment lab at University of Patras.
+
+\item Participation in the \href{http://www.coactivate.org/projects/neoplanta-sprint/project-home}{Neoplanta sprint} and
+  \href{http://plone.org/events/community/sauna-sprint-2010/}{Sauna Sprint}(developing bda.ldap product family)
+
+\item Member of \href{http://eestec.net}{eestec} IT Team
+
+\item Developer of
+  \href{http://code.google.com/p/pythongallery/}{Python Gallery}
+
+\item Active participation in OSS communities: battle for wesnoth(and
+  google summer of code application), \href{http://pypi.python.org/pypi/bda.ldap/}{bda.ldap} plone product family
+  (during neoplanta and sauna sprints)
+
+\item Developer of \href{http://doctor-vlaha.com}{doctor-vlaha.com}
+
+\item Presentation of free software {\it ``Open Source: What, Why and
+    How''} given during the @your service eestec event(presented again
+  in Helsinki during the \href{http://eestec.net/news-and-offers/plone-sauna-sprint-mid-term-report}{Sauna Sprint})
+
+\end{itemize}
+
+\section*{Technical Professional Qualifications}
+
+\begin{itemize}
+\item Programming languages: Python, C, C++, javascript, HTML/css, bash
+\item Experienced user of GNU/Linux(most fluent in ubuntu and arch
+  distributions)
+\item Experience with Joomla! and Plone CMSs and the zope application server
+\end{itemize}
+
+\section*{Non-technical Qualifications}
+
+\begin{itemize}
+\item SAT examination scores: \\ \\
+  \indent
+  \begin{tabular}{|l|c|}
+    \hline
+    \multicolumn{2}{|l|}{\bf Reasoning Tests} \\
+    \hline
+    Critical Reading & 540 \\
+    \hline
+    Math & 720 \\
+    \hline
+    Writing & 610 \\
+    \hline
+    \multicolumn{2}{|l|}{\bf Subject Tests}\\
+    \hline
+    Math Lv. 1 & 700 \\
+    \hline
+    Math Lv. 2 & 620 \\
+    \hline
+    Physics & 730 \\
+    \hline
+  \end{tabular}
+\item Open Source/Free Software enthusiast
+\item Student of martial arts (Kobayasi Shorim-Ryu Karate Do)
+\item Michigan ECPE
+\item Goethe Zertifikat: shriftlichen Teilpr\"{u}fung: 165 Punkte, m\"{u}ndlichen Teilpr\"{u}fung: 56 Punkte
+\item Brief english teaching experience
+\item Private math teaching experience
+\item Attended the AIT Junior Summer School in 2006
+\end{itemize}
+
+\vfill
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today
+  \end{footnotesize}
+\end{center}
+
+\end{document}

@@ -1,0 +1,2 @@
+map <C-c> <C-o>
+map <silent> d <Esc>:tabclose<CR>:tabprevious<CR>

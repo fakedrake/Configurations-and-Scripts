@@ -1,0 +1,6 @@
+/etc/network/interfaces
+/etc/network/#interfaces#
+/etc/default/dhcp3-server
+/etc/default/#dhcp3-server#
+/etc/sysctl.conf
+/etc/#sysctl.conf#

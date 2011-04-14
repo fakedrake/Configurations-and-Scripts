@@ -1,0 +1,3 @@
+M-x shell	open shell
+C-x u		undo
+C-_ 		redo

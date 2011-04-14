@@ -1,0 +1,4 @@
+/etc/X11/xorg.conf.d/10-evdev.conf
+/etc/X11/xorg.conf.d/#10-evdev.conf#
+/home/fakedrake/.ratpoisonrc
+/home/fakedrake/#.ratpoisonrc#
