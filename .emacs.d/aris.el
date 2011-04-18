@@ -36,7 +36,7 @@
 (setq auto-mode-alist
       (append '(("\\.pl$" . prolog-mode) ("\\.m$" . octave-mode)
                 ("\\.imath$" . imath-mode) ("\\.gp$" . gnuplot-mode)
-                ("\\.ly$" . LilyPond-mode) ("\\.*ml$" . nxml-mode))
+                ("\\.ly$" . LilyPond-mode) ("\\.*ml$" . nxml-mode) ("\\.pt$" . html-mode) )
               auto-mode-alist))
 
 ;;; Για recursive πρόσθεση καταλόγων κάτω από τον "~/.emacs-lisp" στο load-path.
@@ -72,7 +72,7 @@
 ;; (global-set-key (kbd "M-N") 'windmove-down)
 
 ;;; Να ψεύγει το τρωκτικό από τη μέση...
-;;; (mouse-avoidance-mode 'banish) 
+;;; (mouse-avoidance-mode 'banish)
 
 ;;; Οι hooks είναι λίστες συναρτήσεων που εκτελούνται με τη σειρά μετά από
 ;;; κάποιο συγκεκριμένο γεγονός. Παραδείγματα:
