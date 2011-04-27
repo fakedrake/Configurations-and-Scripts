@@ -1,0 +1,25 @@
+[Introduction]
+[quick] what is a CMS
+        why?
+What is plone (name deriviation)
+How is plone a cms
+who uses plone
+(why should you care)
+
+[technical]
+speed
+plone and zope and python
+compatibility with dbs(SQL, LDAP, ZODB)
+(since plone4 blob support)
+easy and flexible installation of products
+accessibility and best practices (w3c)
+free sofware(GPLv2)
+
+[strengths]
+security - workflows (case based)
+huge add-on base(collective) - really really open
+eggs
+usable(kupu, tinymce, intuitive content structure, searchable)
+extensible(100s of products for virtually everything
+awesome api
+
