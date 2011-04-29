@@ -1,0 +1,17 @@
+double_buffer yes
+draw_shades no
+alignment top_left
+gap_x 10
+gap_y 0
+use_xft yes
+minimum_size 1260 1
+
+color0 a5bf98
+color1 dddddd
+color2 aaaaaa
+
+#xftfont monospace:size=8
+xftfont Bitstream Vera Sans:size=8
+
+TEXT
+${color0}Arch: ${color1}${fs_used /} / ${fs_size /}${color2}   ::   ${color0}Battery: ${color1}${battery_percent}%   ${color2}::   ${color0}Temp: ${color1}${exec /home/fakedrake/sources/thermal.sh}°C   ${color2}::   ${color0}Cpu: ${color1}$cpu%   ${color2}::   ${color0}Mem: ${color1}$memperc%   ${color2}::   ${color0}Mail: ${color1}${new_mails /home/srijan/Mail/GMail/INBOX}   ${color2}::   ${color0}${execi 300 /home/fakedrake/scripts/weather.sh "EUR|GR|GR003|PATRAI"}${alignr 2}${color1}${time %d %b} ${time %I:%M%p}

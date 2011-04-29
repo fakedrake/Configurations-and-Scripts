@@ -1,0 +1,130 @@
+
+
+alias sshot exec import -window root ~/screenshot-`date +%F`.jpg
+definekey top M-C-Print sshot
+
+# definekey top M-C-Up ratrelwarp 0 -10
+# definekey top M-C-Down ratrelwarp 0 10
+# definekey top M-C-Right ratrelwarp 10 0
+# definekey top M-C-Left ratrelwarp -10 0
+
+# definekey top M-C-z ratclick 1
+# definekey top M-C-x ratclick 3
+# definekey top M-C-, rathold up 1
+# definekey top M-C-m rathold down 1
+
+### Global Settings and Startup ###
+startup_message off
+set wingravity center
+exec xsetroot -cursor_name left_ptr
+banish
+
+### Changed Stuff ###
+escape C-s-semicolon
+definekey root Escape abort
+definekey root c exec tilda
+definekey root C-c exec tilda
+
+definekey top XF86PowerOff exec dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+
+### Application Bindings (and such) ###
+#definekey top s-M exec tilda
+#definekey top s-w exec jumanji
+definekey top s-e exec emacs
+definekey top s-f exec firefox
+definekey top XF86ScreenSaver exec xset dpms force off
+definekey top XF86AudioPlay exec mpc toggle > /dev/null 2>&1
+definekey top XF86AudioNext exec mpc next > /dev/null 2>&1
+definekey top XF86AudioPrev exec mpc prev > /dev/null 2>&1
+definekey top XF86AudioLowerVolume exec ratpoison -c "echo $(amixer set Master 1- | sed -n 6s/^.*F/F/p | sed s/".Left: Playback...."// | sed s/..-.*dB..//)"
+definekey top XF86AudioRaiseVolume exec ratpoison -c "echo $(amixer set Master 1+ | sed -n 6s/^.*F/F/p | sed s/".Left: Playback...."// | sed s/..-.*dB..//)"
+definekey top XF86AudioMute exec ratpoison -c "echo $(amixer set Master toggle | sed  -n 6s/^.*F/F/p | sed s/".Left: Playback...."// | sed s/..-.*dB..//)"
+#definekey top XF86AudioStop exec ratpoison -c "echo $(mpc)"
+definekey top s-a exec ratpoison -c "echo $(echo Battery:$(BATTERY_STATE="$(acpi -a | sed s/.*:\ //)" ; if [ "$BATTERY_STATE" == "on-line" ]; then echo -n '+' ; elif [ "$BATTERY_STATE" == "off-line" ]; then echo -n '-' ; else echo -n 'Error!!!' ; fi ; echo -n $(acpi -b | sed s/%.*/%/ | sed s/.*,\ //))'['"$(BATTERY_STATE="$(echo -n $(acpi -p | sed s/.*,\ // | sed s/...\ .*//))" ; if [ "$(echo $BATTERY_STATE | grep %)" ] ; then echo -n "Charged" ; else echo $BATTERY_STATE ; fi)"'] |'  $(date -u | sed s/....UTC//))"
+
+### Window Management ###
+definekey top s-N prev
+definekey top s-n next
+definekey top s-m focusprev
+definekey top s-h focusleft
+definekey top s-j focusdown
+definekey top s-k focusup
+definekey top s-l focusright
+definekey top s-s vsplit
+definekey top s-S hsplit
+definekey top s-u undo
+definekey top s-U redo
+definekey top s-d remove
+definekey top s-H exchangeleft
+definekey top s-J exchangedown
+definekey top s-K exchangeup
+definekey top s-L exchangeright
+definekey top s-M-h resize -10  0
+definekey top s-M-j resize  0 -10
+definekey top s-M-k resize  0  10
+definekey top s-M-l resize  10  0
+definekey top s-o other
+definekey top s-q delete
+
+### Meta Keys (emulates other keypresses) ###
+definekey top M-M meta Return
+definekey top M-C meta Escape
+definekey top M-X meta Delete
+definekey top M-S-0 meta Home
+definekey top M-parenright meta Home
+definekey top M-dollar meta End
+definekey top M-H meta Left
+definekey top M-J meta Down
+definekey top M-K meta Up
+definekey top M-L meta Right
+definekey top M-C-h meta Left
+definekey top M-C-j meta S-Next
+definekey top M-C-k meta S-Prior
+definekey top M-C-l meta Right
+
+### Clickers ###
+## definekey top s-c exec ratpoison -c "ratwarp $(sed -n 1s/"\ .*"//p .ratpoisoninf) $(sed -n 1s/".*\ "//p .ratpoisoninf)" ; ratpoison -c ratclick ; ratpoison -c banish
+## definekey top s-M-c exec ratpoison -c "ratwarp $(sed -n 2s/"\ .*"//p .ratpoisoninf) $(sed -n 2s/".*\ "//p .ratpoisoninf)" ; ratpoison -c ratclick ; ratpoison -c banish
+## definekey top s-C-c exec ratpoison -c "ratwarp $(sed -n 3s/"\ .*"//p .ratpoisoninf) $(sed -n 3s/".*\ "//p .ratpoisoninf)" ; ratpoison -c ratclick ; ratpoison -c banish
+## definekey top s-C exec if [ $(cat .ratpoisoninf | wc -l) -ne 3 ] ; then echo -en '0 0\n0 0\n0 0\n' > .ratpoisoninf ; fi ; RATPOISONINF="$(sed  1s/.*/"$(ratpoison -c ratinfo)"/ .ratpoisoninf)" ; sh -c "echo \"$RATPOISONINF\"" > .ratpoisoninf
+## definekey top s-M-C exec if [ $(cat .ratpoisoninf | wc -l) -ne 3 ] ; then echo -en '0 0\n0 0\n0 0\n' > .ratpoisoninf ; fi ; RATPOISONINF="$(sed  2s/.*/"$(ratpoison -c ratinfo)"/ .ratpoisoninf)" ; sh -c "echo \"$RATPOISONINF\"" > .ratpoisoninf
+## definekey top s-C-C exec if [ $(cat .ratpoisoninf | wc -l) -ne 3 ] ; then echo -en '0 0\n0 0\n0 0\n' > .ratpoisoninf ; fi ; RATPOISONINF="$(sed  3s/.*/"$(ratpoison -c ratinfo)"/ .ratpoisoninf)" ; sh -c "echo \"$RATPOISONINF\"" > .ratpoisoninf
+definekey top s-C-c exec RAT=$(ratpoison -c ratinfo); ratpoison -c "ratwarp 1 40"; ratpoison -c "ratclick"; ratpoison -c "ratwarp $RAT"
+
+### Misc Bindings ###
+definekey top s-r source .ratpoisonrc
+definekey top s-semicolon colon
+definekey top s-p exec
+definekey top s-W windows
+definekey top s-m lastmsg
+definekey top s-b banish
+
+definekey top s-backslash exec if [ `setxkbmap -print | grep xkb_symbols | awk '{print $4}' | awk -F"+" '{print $2}'` = us ] ;then ratpoison -c "echo GR"; setxkbmap gr ; else ratpoison -c "echo EN"; setxkbmap us ; fi
+# execs
+exec firefox
+exec emacs
+exec tilda
+exec conky
+
+msgwait 3
+set winname title
+set winfmt %n %s %t
+set fgcolor Grey90
+set bgcolor #191919
+set font -*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*
+set winliststyle column
+set inputwidth 400
+set waitcursor 1
+set padding 0 14 0 0
+set barpadding 10 5
+set wingravity n
+set bargravity center
+set border 0
+set barborder 1
+set inputwidth 800
+
+
+#hooks
+addhook key banish
+
+definekey top s-w exec ~/bin/windows
