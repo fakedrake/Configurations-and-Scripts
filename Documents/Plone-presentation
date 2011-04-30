@@ -23,3 +23,43 @@ usable(kupu, tinymce, intuitive content structure, searchable)
 extensible(100s of products for virtually everything
 awesome api
 
+wht is a cms?
+    site not code
+    collaboration
+    labor division
+    authoring tools
+    do things systematically(ensure consistency of look and architecture)
+    web browser
+
+PLONE
+1. easy to get started
+   easy to install
+        cross platform
+        no dependencies
+        (deployment in production is another story)
+
+   well documented
+2. Versatile
+   add ons(number)
+   websites(numbers)
+3. Drag n Drop Import
+4. Rich text editor(tinymce and kupu)
+5. inline editing(click and edit)(?)
+6. livesearch(in pdfs etc)
+7. linkchecker
+   links to uids
+   move stuff around
+   links dont breake
+   warning upon deletion
+8. security
+   unix based security model
+   security vulnerabilities compared to php
+9. Authentication(PlonePAS)
+   OpenID
+   LDAP
+   Apache
+   RDBMS
+   Salesforce
+   Gmail
+10. Community
+   Fun(sprints, conference etc)
