@@ -115,4 +115,4 @@ if [ -f /etc/arch-release ]; then
     alias python="python2"
 fi
 
-export EDITOR='emacs -nw'
+export EDITOR='emacsclient'
