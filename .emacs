@@ -127,3 +127,6 @@ call function ansi-term interactively."
                                              (not (null buffer-file-name)))))))
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
+
+(setq term-default-bg-color "black")
+(setq term-default-fg-color "white")
