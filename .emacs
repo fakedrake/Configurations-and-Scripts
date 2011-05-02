@@ -103,3 +103,27 @@
 (add-to-list 'ac-css-value-classes
              '(border-width "thin" "medium" "thick" "inherit"))
 (set-cursor-color "white")
+
+(defun green-ansi-term ()
+  "Show an existing buffer called \"*ansi-term*\" if one exists, otherwise
+call function ansi-term interactively."
+  (interactive)
+  (let ((existing-buffer (get-buffer "*ansi-term*")))
+    (if existing-buffer
+        (switch-to-buffer existing-buffer)
+      (call-interactively 'ansi-term))))
+(global-set-key (kbd "\C-x \C-a") 'green-ansi-term)
+
+(setq erc-log-channels-directory "~/.erc/logs/")
+(setq erc-save-buffer-on-part nil
+      erc-save-queries-on-quit nil
+      erc-log-write-after-send t
+      erc-log-write-after-insert t)
+
+(setq erc-hide-timestamps t)
+
+(defadvice save-buffers-kill-emacs (before save-logs (arg) activate)
+  (save-some-buffers t (lambda () (when (and (eq major-mode 'erc-mode)
+                                             (not (null buffer-file-name)))))))
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
