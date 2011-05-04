@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Who am I}{1}{0}{1}
+\beamer@sectionintoc {2}{What is a CMS}{2}{0}{2}
+\beamer@subsectionintoc {2}{1}{History}{2}{0}{2}
+\beamer@subsectionintoc {2}{2}{Today}{5}{0}{2}
+\beamer@sectionintoc {3}{About Plone}{15}{0}{3}
+\beamer@sectionintoc {4}{Easy Startup and Configuration}{18}{0}{4}
+\beamer@sectionintoc {5}{I10n/l18n}{21}{0}{5}
+\beamer@sectionintoc {6}{Collective}{22}{0}{6}
+\beamer@sectionintoc {7}{Data Organization}{24}{0}{7}
+\beamer@sectionintoc {8}{Search}{28}{0}{8}
+\beamer@sectionintoc {9}{Security}{31}{0}{9}
+\beamer@sectionintoc {10}{Authentication}{35}{0}{10}
+\beamer@sectionintoc {11}{Bling!}{36}{0}{11}
+\beamer@sectionintoc {12}{Community}{46}{0}{12}
