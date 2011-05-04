@@ -86,7 +86,7 @@
 (require 'aris)
 
 (require 'multi-term)
-(setq multi-term-program "bin/bash")
+;;(setq multi-term-program "bin/bash")
 
 (set-background-color "black")
 (set-foreground-color "white")

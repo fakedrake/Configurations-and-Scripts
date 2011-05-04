@@ -12,11 +12,10 @@
 
 % \AtBeginSection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection]\end{frame}}
 
-\usepackage{Sweave}
 \begin{document}
 
-
-
+\SweaveOpts{engine=R,eps=FALSE,pdf=TRUE,strip.white=all}
+\SweaveOpts{prefix=TRUE,prefix.string=fig-,include=TRUE}
 
 \section{Who am I}
 \frame{\titlepage}
@@ -116,18 +115,18 @@
 \end{frame}
 
 \begin{frame}
-  \vspace{5.5mm}
-  \begin{center}\includegraphics[height=0.8\textheight]{tree.pdf}\end{center}
+    \vspace{5.5mm}
+    \begin{center}\includegraphics[height=0.8\textheight]{tree.pdf}\end{center}
 \end{frame}
 
 \begin{frame}
-  \hfill test.com/a/d
-  \begin{center}\includegraphics[height=0.8\textheight]{tree-ad.pdf}\end{center}
+    \hfill test.com/a/d
+    \begin{center}\includegraphics[height=0.8\textheight]{tree-ad.pdf}\end{center}
 \end{frame}
 
 \begin{frame}
-  \hfill test.com/a/b/f/i
-  \begin{center}\includegraphics[height=0.8\textheight]{tree-abfi.pdf}\end{center}
+    \hfill test.com/a/b/f/i
+    \begin{center}\includegraphics[height=0.8\textheight]{tree-abfi.pdf}\end{center}
 \end{frame}
 % folderish objects+views have a pic about this
 
@@ -141,17 +140,67 @@
 
 \section{Security}
 
-\begin{frame}{Lies,damn lies and statistics}
-  \begin{center}
-    \includegraphics[keepaspectratio,height=0.8\textheight]{cve-cms.pdf}
-  \end{center}
-\end{frame}% 655 375 311 13
+\begin{frame}
+<<echo=FALSE, results=HIDE>>=
+pdf(file='cve.pdf')
+x = c(655,375,311,13)
+names(x) = c('Joomla!','Drupal','WordPress','Plone')
+barplot(x)
+dev.off()
+@
+\includegraphics[height=\textheight]{cve.pdf}
 
-\begin{frame}{Lies,damn lies and statistics}
-  \begin{center}
-    \includegraphics[keepaspectratio,height=0.8\textheight]{lang-nvd.pdf}
-  \end{center}
-\end{frame}% 18917 115
+\end{frame}
+
+\begin{frame}{Lies, Damn Lies and Statistics}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}
+      [ybar, bar width=1cm,
+      axis x line*=bottom,
+      axis y line*=left,
+      nodes near coords,
+      legend pos=south east,
+      ylabel=\textbf{NVD Vulnerabilities},
+      xtick=data,
+      % x tick label style={/pgf/number format/1000 sep=},
+      xticklabels={Joomla!,Drupal,WordPress,Plone},
+      major tick length=0,
+      ymin=0
+      ]
+      \addplot[fill=blue, draw=blue] coordinates
+      {(1,655)
+        (2,375)
+        (3,311)
+        (4,13)};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Lies, Damn Lies and Statistics}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}
+      [ybar, bar width=1cm,
+      axis x line*=bottom,
+      axis y line*=left,
+      nodes near coords,
+      legend pos=south east,
+      ylabel=\textbf{NVD Vulnerabilities},
+      xtick=data,
+      % x tick label style={/pgf/number format/1000 sep=0pt},
+      xticklabels={PHP,Python},
+      major tick length=0,
+      ymin=0
+      ]
+      \addplot[fill=blue, draw=blue] coordinates
+      {(1,18917)
+        (2,115)};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+
 
 \frame{unix prototype}
 \frame{users->roles->permissions->data(states)}

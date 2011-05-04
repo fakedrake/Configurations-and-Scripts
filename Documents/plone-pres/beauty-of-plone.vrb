@@ -1,0 +1,7 @@
+\begin {Schunk}
+    \begin{Sinput}
+      > x = c(655, 375, 311, 13)
+      > names(x) = c("Joomla!", "Drupal", "WordPress", "Plone")
+      > barplot(x)
+    \end{Sinput}
+  \end{Schunk}
