@@ -1,0 +1,186 @@
+\documentclass[arial,pdftex]{beamer}
+\usepackage{graphicx}
+
+\title{ISP(Internet Service Provider)}
+\subtitle{}
+% \institute{University of Patras, Electrical Engineering Department}
+
+\author{Gryparis Dimitris, Chris Perivolaropoulos}
+
+\AtBeginSection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection]\end{frame}}
+
+
+\begin{document}
+
+\section{Introduction}
+\frame{\titlepage}
+
+\begin{frame}{What is an ISP really}
+  \begin{itemize}
+  \item Access to the internet
+  \item Webite buiding
+  \item Virtual Hosting
+  \item e-mail service
+  \item ...other web services
+  \end{itemize}
+\end{frame}
+
+
+\section{History}
+
+\subsection{pre-90s}
+\begin{frame}frame{Before ISPs}
+  Closed network
+  \begin{itemize}
+  \item Government research laboratories
+  \item Relevant parts of universities
+  \item Access required an account on either vendor
+  \end{itemize}
+\end{frame}
+
+\subsection{post-90s}
+\begin{frame}
+  1990 Brookline, Massachusetts-based The World became the 1st
+  commercial ISP
+\end{frame}
+
+\section{Today}
+\subsection{World}
+\begin{frame}{more than 100 ISPs in USA}
+  XXX: subscribers for some of them
+\end{frame}
+
+\subsection{Greece}
+\begin{frame}
+  \begin{itemize}
+  \item Largest ISP in greece: OTE
+  \item Common speed 24/1
+  \item Bitstream network property of ote
+    \begin{itemize}
+    \item lines by HOL and Tellas
+    \end{itemize}
+  \item Satellite broadband available by Hellas Sat sattelite
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ISPs in Greece}
+  \begin{itemize}
+  \item OTENET
+  \item Forthnet
+  \item Hellas OnLine
+  \item Tellas
+  \item Vodafone
+  \end{itemize}
+\end{frame}
+\section{Infastucture}
+
+\subsection{Tier Networks}
+\begin{frame}{Peering Connections}
+  \begin{itemize}
+  \item Not charged
+  \item Upstream not filtered or logged
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Transit Connection}
+  \begin{itemize}
+  \item Payed connection
+  \item conditions defined per case
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tier 1}
+  \begin{itemize}
+  \item Large netwroks
+  \item Interconnected with extreme speeds
+  \item Described by hamiltonian graph
+  \item Only peering connections
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tier 2}
+  \begin{itemize}
+  \item Smaller netwroks \pause
+  \item Ensure access by Tier 1\pause
+  \item Peering and transit\pause
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tier 3}
+  \begin{itemize}
+  \item Propertary
+  \item Transit connections only
+  \end{itemize}
+\end{frame}
+
+\subsection{Internet Exchange Points}
+% LINX photo
+\begin{frame}{Internet Exchange Point (IXP)}
+  \begin{itemize}
+  \item gateway between large geographical regions
+  \item Reduce delivery cost
+  \end{itemize}
+  XXX: chart 5 first and greece
+\end{frame}
+
+\section{Statistics}
+\frame{international bandwidth usage statistics}
+\frame{pg13 graphs}
+\frame{pg14 server OS}
+
+\section{Virtual Hosting}
+% a frame about racks
+\begin{frame}{Racks}
+  \begin{itemize}
+  \item Module of a mainframe
+  \item Standard mounting and upporting mechanism
+  \item Used to optimize modularity of servers
+  \end{itemize}
+\end{frame}
+
+% system rquirements
+\begin{frame}{Server System Requirements}
+  \begin{itemize}
+  \item 5 Concurrent Users:
+    \begin{itemize}
+    \item 2GHz CPU
+    \item 512MB RAM
+    \item 5GB database space
+    \end{itemize}
+    \pause
+  \item 25 Concurrent Users:
+    \begin{itemize}
+    \item Quad 2GHz CPU
+    \item 2GB RAM
+    \item 10GB database space
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% HW prcessors pg24
+\section{Throttling and Capping}
+\begin{frame}{Throttling}
+  \begin{itemize}
+  \item save device
+  \item cut upstream OR downstream
+  \item precaution to server crashes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Capping}
+  \begin{itemize}
+  \item Save the network
+  \item Cut down on all activity
+  \item Examples:
+    \begin{itemize}
+    \item P2P
+    \item pinging
+    \item illegal activity
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{references}
+
+\end{document}

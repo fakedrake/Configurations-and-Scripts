@@ -1,0 +1,140 @@
+\documentclass[arial,pdftex]{beamer}
+\usepackage{graphicx}
+
+\title{ISP(Internet Service Provider)}
+\subtitle{}
+% \institute{University of Patras, Electrical Engineering Department}
+
+\author{Gryparis Dimitris, Chris Perivolaropoulos}
+
+\AtBeginSection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection]\end{frame}}
+
+
+\begin{document}
+
+\section{Introduction}
+\frame{\titlepage}
+
+\begin{frame}{What is an ISP really}
+  \begin{itemize}
+  \item Access to the internet
+  \item Webite buiding
+  \item Virtual Hosting
+  \item e-mail service
+  \item ...other web services
+  \end{itemize}
+\end{frame}
+
+
+\section{History}
+
+\subsection{pre-90s}
+\frame{The internet started off as a closed network between government research laboratories and relevant parts of
+  universities}
+
+\frame{To access the internet you needed an account at a university or a government agency}
+
+\subsection{post-90s}
+\begin{frame}
+  1990 Brookline, Massachusetts-based The World became the 1st
+  commercial ISP
+\end{frame}
+
+\section{Today}
+\subsection{World}
+\frame{more than 100 ISPs in USA}
+
+\frame{XXX: top five providers + subscribership}
+
+\subsection{Greece}
+\frame{Most subscribers OTE}
+\frame{speed 24/1, networks bitstream property of OTE, lines by HOL and Tellas}
+\frame{XXX: list of isps}
+\frame{Satellite broadband available by Hellas Sat sattelite}
+
+
+\section{Infastucture}
+
+\subsection{Tier Networks}
+\frame{peering connection}
+\frame{transit connection}
+
+\begin{frame}{Tier 1}
+  \begin{itemize}
+  \item Large netwroks
+  \item Interconnected with extreme speeds
+  \item Described by hamiltonian graph
+  \item Only peering connections
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tier 2}
+  \begin{itemize}
+  \item Smaller netwroks \pause
+  \item Ensure access by Tier 1\pause
+  \item Peering and transit\pause
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tier 3}
+  \begin{itemize}
+  \item Propertary
+  \item Transit connections only
+  \end{itemize}
+\end{frame}
+
+\subsection{Internet Exchange Points}
+% LINX photo
+\begin{frame}{Internet Exchange Point (IXP)}
+  \begin{itemize}
+  \item gateway between large geographical regions
+  \item Reduce delivery cost
+  \end{itemize}
+  chart 5 first and greece
+\end{frame}
+
+\section{Statistics}
+\frame{international bandwidth usage statistics}
+\frame{pg13 graphs}
+\frame{pg14 server OS}
+
+\section{Virtual Hosting}
+% a frame about racks
+\begin{frame}{Racks}
+  \begin{itemize}
+  \item Module of a mainframe
+  \item Standard mounting and upporting mechanism
+  \item Used to optimize modularity of servers
+  \end{itemize}
+\end{frame}
+
+% system rquirements
+\begin{frame}{Server System Requirements}
+  \begin{itemize}
+  \item 5 Concurrent Users:
+    \begin{itemize}
+    \item 2GHz CPU
+    \item 512MB RAM
+    \item 5GB database space
+    \end{itemize}
+
+  \item 25 Concurrent Users:
+    \begin{itemize}
+    \item Quad 2GHz CPU
+    \item 2GB RAM
+    \item 10GB database space
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+% HW prcessors pg24
+
+\section{Throttling}
+\frame{what is throttling(save device, cut one direction),save the device,precaution to server crashes}
+
+\frame{capping(save network, cut activity), cutdown speed on P2P,
+  pinging, illegal activity}
+
+\section{references}
+
+\end{document}

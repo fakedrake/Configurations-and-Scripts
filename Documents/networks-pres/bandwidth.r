@@ -1,0 +1,5 @@
+pdf(file="bandwidth.pdf")
+data = c(1.3, 2.5, 3.6, 5.1, 7.05, 11.5, 19.1, 31)
+names(data) = c(2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009)
+plot(data)
+dev.off()

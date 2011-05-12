@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introduction}{1}{0}{1}
+\beamer@sectionintoc {2}{History}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{pre-90s}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{post-90s}{7}{0}{2}
+\beamer@sectionintoc {3}{Today}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{World}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Greece}{11}{0}{3}
+\beamer@sectionintoc {4}{Infastucture}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{Tier Networks}{15}{0}{4}
+\beamer@subsectionintoc {4}{2}{Internet Exchange Points}{23}{0}{4}
+\beamer@sectionintoc {5}{Statistics}{24}{0}{5}
+\beamer@sectionintoc {6}{Virtual Hosting}{28}{0}{6}
+\beamer@sectionintoc {7}{Throttling and Capping}{32}{0}{7}
+\beamer@sectionintoc {8}{references}{35}{0}{8}

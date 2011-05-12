@@ -1,0 +1,5 @@
+pdf(file="subscribers-pc.pdf",paper="a4r",width=0,height=0)
+data <- c(22200000, 8600000,8142000,8000000,6700000 )
+names <- c("AOL","NetZero","Comcast","Microsoft Network","Spinway")
+barplot(data,names.arg=names,las=1)
+dev.off()
