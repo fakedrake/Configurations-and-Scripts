@@ -37,8 +37,8 @@
       (append '(("\\.pl$" . prolog-mode) ("\\.m$" . octave-mode)
                 ("\\.imath$" . imath-mode) ("\\.gp$" . gnuplot-mode)
                 ("\\.ly$" . LilyPond-mode) ("\\.*ml$" . nxml-mode) ("\\.pt$" . html-mode)
-                ("\\.Rnw$" . latex-mode)
-              auto-mode-alist)))
+                ("\\.Rnw$" . latex-mode))
+              auto-mode-alist))
 
 ;;; Για recursive πρόσθεση καταλόγων κάτω από τον "~/.emacs-lisp" στο load-path.
 ;;; (progn (cd "~/.emacs-lisp")

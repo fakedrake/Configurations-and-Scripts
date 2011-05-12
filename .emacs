@@ -86,6 +86,7 @@
 (require 'aris)
 
 (require 'multi-term)
+(multi-term-keystroke-setup)
 ;;(setq multi-term-program "bin/bash")
 
 (set-background-color "black")
@@ -131,3 +132,4 @@ call function ansi-term interactively."
 (setq term-default-bg-color "black")
 (setq term-default-fg-color "white")
 (global-set-key (kbd "C->") 'end-of-line)
+(server-start)
